@@ -6,6 +6,16 @@ $('form').bind("keypress", function(e) {
     }
   });
 
+  // this loads the tasks when the page is loaded
+window.onload = function(){
+  document.getElementById("div-9am").innerHTML = JSON.parse(window.localStorage.getItem("9am"));
+  $("#div-9am").text = JSON.parse(window.localStorage.getItem("9am"));
+
+  //10
+  document.getElementById("div-10am").innerHTML = JSON.parse(window.localStorage.getItem("10am"));
+  $("#div-10am").text = JSON.parse(window.localStorage.getItem("10am"));
+}
+
 /*                           9                                */ 
   // this submits the 9AM input when enter key is pressed
 var enterKey9 = document.getElementById("input-9am");
@@ -35,20 +45,20 @@ document.addEventListener("click", function(e){
     }
 });
 
-// this loads the tasks when the page is loaded
-window.onload = function(){
-  document.getElementById("div-9am").innerHTML = JSON.parse(window.localStorage.getItem("9am"));
-  $("#div-9am").text = JSON.parse(window.localStorage.getItem("9am"));
+document.addEventListener("click", function(e){
+  if(e.target && e.target.id == "clear-9am"){
+      e.preventDefault();
+      document.getElementById("div-9am").innerHTML = "";
+      // change styling
+  }
+});
 
-  //10
-  document.getElementById("div-10am").innerHTML = JSON.parse(window.localStorage.getItem("10am"));
-  $("#div-10am").text = JSON.parse(window.localStorage.getItem("10am"));
-}
+
 
 
 /*                           10                                */ 
 
-  // this submits the 9AM input when enter key is pressed
+  // this submits the 10AM input when enter key is pressed
   var enterKey10 = document.getElementById("input-10am");
   enterKey10.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -63,7 +73,7 @@ window.onload = function(){
   });
   
   
-    // this submits the 9AM input when the save button is pressed
+    // this submits the 10AM input when the save button is pressed
   document.addEventListener("click", function(e){
       if(e.target && e.target.id == "save-10am"){
           e.preventDefault();
@@ -74,5 +84,13 @@ window.onload = function(){
           text10am2.value = text10amReturn;
           document.getElementById("div-10am").innerHTML = text10amReturn;
       }
+  });
+
+  document.addEventListener("click", function(e){
+    if(e.target && e.target.id == "clear-10am"){
+        e.preventDefault();
+        document.getElementById("div-10am").innerHTML = "";
+        // change styling
+    }
   });
   
