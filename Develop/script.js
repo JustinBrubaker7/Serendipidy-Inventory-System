@@ -129,7 +129,7 @@ document.addEventListener("click", function(e){
 
   /*                           11 am                                */ 
 
-  // this submits the 10AM input when enter key is pressed
+  // this submits the 11AM input when enter key is pressed
   var enterKey11 = document.getElementById("input-11am");
   enterKey11.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -144,7 +144,7 @@ document.addEventListener("click", function(e){
   });
   
   
-    // this submits the 10AM input when the save button is pressed
+    // this submits the 11AM input when the save button is pressed
   document.addEventListener("click", function(e){
       if(e.target && e.target.id == "save-11am"){
         e.preventDefault();
@@ -169,7 +169,7 @@ document.addEventListener("click", function(e){
 
   /*                           12pm                                */ 
 
-  // this submits the 10AM input when enter key is pressed
+  // this submits the 12pm input when enter key is pressed
   var enterKey12 = document.getElementById("input-12pm");
   enterKey12.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -184,7 +184,7 @@ document.addEventListener("click", function(e){
   });
   
   
-    // this submits the 10AM input when the save button is pressed
+    // this submits the 12pm input when the save button is pressed
   document.addEventListener("click", function(e){
       if(e.target && e.target.id == "save-12pm"){
         e.preventDefault();
@@ -210,7 +210,7 @@ document.addEventListener("click", function(e){
   
    /*                           1pm                                */ 
 
-  // this submits the 10AM input when enter key is pressed
+  // this submits the 1pm input when enter key is pressed
   var enterKey1 = document.getElementById("input-1pm");
   enterKey1.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -225,7 +225,7 @@ document.addEventListener("click", function(e){
   });
   
   
-    // this submits the 10AM input when the save button is pressed
+    // this submits the 1pm input when the save button is pressed
   document.addEventListener("click", function(e){
       if(e.target && e.target.id == "save-1pm"){
         e.preventDefault();
@@ -250,7 +250,7 @@ document.addEventListener("click", function(e){
     
    /*                           2pm                                */ 
 
-  // this submits the 10AM input when enter key is pressed
+  // this submits the 2pm input when enter key is pressed
   var enterKey2 = document.getElementById("input-2pm");
   enterKey2.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -265,7 +265,7 @@ document.addEventListener("click", function(e){
   });
   
   
-    // this submits the 10AM input when the save button is pressed
+    // this submits the 2pm input when the save button is pressed
   document.addEventListener("click", function(e){
       if(e.target && e.target.id == "save-2pm"){
         e.preventDefault();
@@ -291,7 +291,7 @@ document.addEventListener("click", function(e){
       
    /*                           3pm                                */ 
 
-  // this submits the 10AM input when enter key is pressed
+  // this submits the 3pm input when enter key is pressed
   var enterKey3 = document.getElementById("input-3pm");
   enterKey3.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -306,7 +306,7 @@ document.addEventListener("click", function(e){
   });
   
   
-    // this submits the 10AM input when the save button is pressed
+    // this submits the 3pm input when the save button is pressed
   document.addEventListener("click", function(e){
       if(e.target && e.target.id == "save-3pm"){
         e.preventDefault();
@@ -331,7 +331,7 @@ document.addEventListener("click", function(e){
 
  /*                           4pm                                */ 
 
-  // this submits the 10AM input when enter key is pressed
+  // this submits the 4pm input when enter key is pressed
   var enterKey4 = document.getElementById("input-4pm");
   enterKey4.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -346,7 +346,7 @@ document.addEventListener("click", function(e){
   });
   
   
-    // this submits the 10AM input when the save button is pressed
+    // this submits the 4pm input when the save button is pressed
   document.addEventListener("click", function(e){
       if(e.target && e.target.id == "save-4pm"){
         e.preventDefault();
@@ -370,7 +370,7 @@ document.addEventListener("click", function(e){
 
    /*                           5pm                                */ 
 
-  // this submits the 10AM input when enter key is pressed
+  // this submits the 5pm input when enter key is pressed
   var enterKey5 = document.getElementById("input-5pm");
   enterKey5.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -385,7 +385,7 @@ document.addEventListener("click", function(e){
   });
   
   
-    // this submits the 10AM input when the save button is pressed
+    // this submits the 5pm input when the save button is pressed
   document.addEventListener("click", function(e){
       if(e.target && e.target.id == "save-5pm"){
         e.preventDefault();
@@ -407,4 +407,210 @@ document.addEventListener("click", function(e){
     }
   });
 
+//END OF TABLE FUNCTIONS
 
+
+  document.addEventListener("click", function(e){
+    if(e.target && e.target.id == "clear-all"){
+        e.preventDefault();
+        document.getElementById("div-9am").innerHTML = "";
+        window.localStorage.setItem("9am", JSON.stringify(""));
+
+        document.getElementById("div-10am").innerHTML = "";
+        window.localStorage.setItem("10am", JSON.stringify(""));
+
+        document.getElementById("div-11am").innerHTML = "";
+        window.localStorage.setItem("11am", JSON.stringify(""));
+
+        document.getElementById("div-12pm").innerHTML = "";
+        window.localStorage.setItem("12pm", JSON.stringify(""));
+
+        document.getElementById("div-1pm").innerHTML = "";
+        window.localStorage.setItem("1pm", JSON.stringify(""));
+
+        document.getElementById("div-2pm").innerHTML = "";
+        window.localStorage.setItem("2pm", JSON.stringify(""));
+
+        document.getElementById("div-3pm").innerHTML = "";
+        window.localStorage.setItem("3pm", JSON.stringify(""));
+
+        document.getElementById("div-4pm").innerHTML = "";
+        window.localStorage.setItem("4pm", JSON.stringify(""));
+
+        document.getElementById("div-5pm").innerHTML = "";
+        window.localStorage.setItem("5pm", JSON.stringify(""));
+        // change styling
+    }
+  });
+
+
+//Jumbotron time display
+ var time = moment().format("MMMM Do YY, h:mm a"); 
+document.getElementById("currentDay").innerHTML = time;
+
+//setting the background color based on time
+
+
+
+
+//if id unix code is equal to curremt time
+//set class to .present
+
+//else if les than current time
+// set class to past
+
+//else class set to futuer
+
+
+var currentTime = moment().format("h:mm a");
+
+
+function setStyleOnTime5pm() {
+  var time5Pm = document.getElementById("5pm").textContent;
+
+  if (currentTime < time5Pm) {
+    document.getElementById("5pm").setAttribute("class", "future");
+  } else if (currentTime > time5Pm) {
+    document.getElementById("5pm").setAttribute("class", "past");
+  } else if (currentTime == time5Pm) {
+    document.getElementById("5pm").setAttribute("class", "present");
+  } else {
+    document.getElementById("5pm").setAttribute("class", "past");
+  }
+}
+
+
+
+function setStyleOnTime4pm() {
+  var time4Pm = document.getElementById("4pm").textContent;
+
+  if (currentTime < time4Pm) {
+    document.getElementById("4pm").setAttribute("class", "future");
+  } else if (currentTime > time4Pm) {
+    document.getElementById("4pm").setAttribute("class", "past");
+  } else if (currentTime == time4Pm) {
+    document.getElementById("4pm").setAttribute("class", "present");
+  } else {
+    document.getElementById("4pm").setAttribute("class", "past");
+  }
+}
+
+
+function setStyleOnTime3pm() {
+  var time3Pm = document.getElementById("3pm").textContent;
+
+  if (currentTime < time3Pm) {
+    document.getElementById("3pm").setAttribute("class", "future");
+  } else if (currentTime > time3Pm) {
+    document.getElementById("3pm").setAttribute("class", "past");
+  } else if (currentTime == time3Pm) {
+    document.getElementById("3pm").setAttribute("class", "present");
+  } else {
+    document.getElementById("3pm").setAttribute("class", "past");
+  }
+}
+
+
+function setStyleOnTime2pm() {
+  var time2Pm = document.getElementById("2pm").textContent;
+
+  if (currentTime < time2Pm) {
+    document.getElementById("2pm").setAttribute("class", "future");
+  } else if (currentTime > time2Pm) {
+    document.getElementById("2pm").setAttribute("class", "past");
+  } else if (currentTime == time2Pm) {
+    document.getElementById("2pm").setAttribute("class", "present");
+  } else {
+    document.getElementById("2pm").setAttribute("class", "past");
+  }
+}
+
+function setStyleOnTime1pm() {
+  var time1Pm = document.getElementById("1pm").textContent;
+
+  if (currentTime < time1Pm) {
+    document.getElementById("1pm").setAttribute("class", "future");
+  } else if (currentTime > time1Pm) {
+    document.getElementById("1pm").setAttribute("class", "past");
+  } else if (currentTime == time1Pm) {
+    document.getElementById("1pm").setAttribute("class", "present");
+  } else {
+    document.getElementById("1pm").setAttribute("class", "past");
+  }
+}
+
+function setStyleOnTime12pm() {
+  var time12Pm = document.getElementById("12pm").textContent;
+
+  if (currentTime < time12Pm) {
+    document.getElementById("12pm").setAttribute("class", "future");
+  } else if (currentTime > time12Pm) {
+    document.getElementById("12pm").setAttribute("class", "past");
+  } else if (currentTime == time12Pm) {
+    document.getElementById("12pm").setAttribute("class", "present");
+  } else {
+    document.getElementById("12pm").setAttribute("class", "past");
+  }
+}
+
+
+function setStyleOnTime11am() {
+  var time11am = document.getElementById("11am").textContent;
+
+  if (currentTime < time11am) {
+    document.getElementById("11am").setAttribute("class", "future");
+  } else if (currentTime > time11am) {
+    document.getElementById("11am").setAttribute("class", "past");
+  } else if (currentTime == time11am) {
+    document.getElementById("11am").setAttribute("class", "present");
+  } else {
+    document.getElementById("11am").setAttribute("class", "past");
+  }
+}
+
+function setStyleOnTime10am() {
+  var time10am = document.getElementById("10am").textContent;
+
+  if (currentTime < time10am) {
+    document.getElementById("10am").setAttribute("class", "future");
+  } else if (currentTime > time10am) {
+    document.getElementById("10am").setAttribute("class", "past");
+  } else if (currentTime == time10am) {
+    document.getElementById("10am").setAttribute("class", "present");
+  } else {
+    document.getElementById("10am").setAttribute("class", "past");
+  }
+}
+
+
+function setStyleOnTime9am() {
+  var time9am = document.getElementById("9am").textContent;
+  console.log(time9am);
+  if (currentTime < time9am) {
+    document.getElementById("9am").setAttribute("class", "future");
+  } else if (currentTime > time9am) {
+    document.getElementById("9am").setAttribute("class", "past");
+  } else if (currentTime == time9am) {
+    document.getElementById("9am").setAttribute("class", "present");
+  } else {
+    document.getElementById("9am").setAttribute("class", "past");
+  }
+}
+
+console.log(currentTime);
+
+
+
+
+
+
+
+setStyleOnTime5pm();
+setStyleOnTime4pm();
+setStyleOnTime3pm();
+setStyleOnTime2pm();
+setStyleOnTime1pm();
+setStyleOnTime12pm();
+setStyleOnTime11am();
+setStyleOnTime10am();
+setStyleOnTime9am();
