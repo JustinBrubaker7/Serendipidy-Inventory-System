@@ -462,7 +462,7 @@ document.getElementById("currentDay").innerHTML = time;
 //else class set to futuer
 
 
-var currentTime = moment().format("h:mm a");
+var currentTime = moment().format("h");
 
 
 function setStyleOnTime5pm() {
@@ -555,7 +555,7 @@ function setStyleOnTime12pm() {
 
 
 function setStyleOnTime11am() {
-  var time11am = document.getElementById("11am").textContent;
+  var time11am = document.getElementById("11am").getAttribute("data-time");
 
   if (currentTime < time11am) {
     document.getElementById("11am").setAttribute("class", "future");
@@ -569,8 +569,10 @@ function setStyleOnTime11am() {
 }
 
 function setStyleOnTime10am() {
-  var time10am = document.getElementById("10am").textContent;
+  var time10am = document.getElementById("10am").getAttribute("data-time");
 
+  console.log(currentTime);
+  console.log(time10am);
   if (currentTime < time10am) {
     document.getElementById("10am").setAttribute("class", "future");
   } else if (currentTime > time10am) {
@@ -585,7 +587,7 @@ function setStyleOnTime10am() {
 
 function setStyleOnTime09am() {
   var time9am = document.getElementById("09am").textContent;
-  console.log(time9am);
+  
   if (currentTime < time9am) {
     document.getElementById("09am").setAttribute("class", "future");
   } else if (currentTime > time9am) {
@@ -597,7 +599,6 @@ function setStyleOnTime09am() {
   }
 }
 
-console.log(currentTime);
 
 
 
