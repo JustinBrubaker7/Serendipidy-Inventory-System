@@ -530,9 +530,11 @@ function setStyleOnTime1pm() {
   var time1Pm = document.getElementById("1pm").getAttribute("data-time");
 
   if (currentTime < time1Pm) {
-    document.getElementById("1pm").setAttribute("class", "past");
-  } else if (currentTime > time1Pm) {
     document.getElementById("1pm").setAttribute("class", "future");
+  } else if (currentTime > time1Pm) {
+    document.getElementById("1pm").setAttribute("class", "past");
+  }else if (currentTime == time12Pm) {
+    document.getElementById("12pm").setAttribute("class", "present");
   } else{
     document.getElementById("1pm").setAttribute("class", "present");
   } 
