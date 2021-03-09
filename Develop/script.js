@@ -583,17 +583,17 @@ function setStyleOnTime10am() {
 }
 
 
-function setStyleOnTime9am() {
-  var time9am = document.getElementById("9am").textContent;
+function setStyleOnTime09am() {
+  var time9am = document.getElementById("09am").textContent;
   console.log(time9am);
   if (currentTime < time9am) {
-    document.getElementById("9am").setAttribute("class", "future");
+    document.getElementById("09am").setAttribute("class", "future");
   } else if (currentTime > time9am) {
-    document.getElementById("9am").setAttribute("class", "past");
+    document.getElementById("09am").setAttribute("class", "past");
   } else if (currentTime == time9am) {
-    document.getElementById("9am").setAttribute("class", "present");
+    document.getElementById("09am").setAttribute("class", "present");
   } else {
-    document.getElementById("9am").setAttribute("class", "past");
+    document.getElementById("09am").setAttribute("class", "past");
   }
 }
 
@@ -613,4 +613,4 @@ setStyleOnTime1pm();
 setStyleOnTime12pm();
 setStyleOnTime11am();
 setStyleOnTime10am();
-setStyleOnTime9am();
+setStyleOnTime09am();
