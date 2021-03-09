@@ -466,7 +466,7 @@ var currentTime = moment().format("h");
 
 
 function setStyleOnTime5pm() {
-  var time5Pm = document.getElementById("5pm").textContent;
+  var time5Pm = document.getElementById("5pm").getAttribute("data-time");
 
   if (currentTime < time5Pm) {
     document.getElementById("5pm").setAttribute("class", "future");
@@ -482,7 +482,7 @@ function setStyleOnTime5pm() {
 
 
 function setStyleOnTime4pm() {
-  var time4Pm = document.getElementById("4pm").textContent;
+  var time4Pm = document.getElementById("4pm").getAttribute("data-time");
 
   if (currentTime < time4Pm) {
     document.getElementById("4pm").setAttribute("class", "future");
@@ -497,8 +497,7 @@ function setStyleOnTime4pm() {
 
 
 function setStyleOnTime3pm() {
-  var time3Pm = document.getElementById("3pm").textContent;
-
+  var time3Pm = document.getElementById("3pm").getAttribute("data-time");
   if (currentTime < time3Pm) {
     document.getElementById("3pm").setAttribute("class", "future");
   } else if (currentTime > time3Pm) {
@@ -512,7 +511,7 @@ function setStyleOnTime3pm() {
 
 
 function setStyleOnTime2pm() {
-  var time2Pm = document.getElementById("2pm").textContent;
+  var time2Pm = document.getElementById("2pm").getAttribute("data-time");
 
   if (currentTime < time2Pm) {
     document.getElementById("2pm").setAttribute("class", "future");
@@ -526,21 +525,19 @@ function setStyleOnTime2pm() {
 }
 
 function setStyleOnTime1pm() {
-  var time1Pm = document.getElementById("1pm").textContent;
+  var time1Pm = document.getElementById("1pm").getAttribute("data-time");
 
   if (currentTime < time1Pm) {
-    document.getElementById("1pm").setAttribute("class", "future");
+    document.getElementById("1pm").setAttribute("class", "past");
   } else if (currentTime > time1Pm) {
-    document.getElementById("1pm").setAttribute("class", "past");
-  } else if (currentTime == time1Pm) {
+    document.getElementById("1pm").setAttribute("class", "future");
+  } else{
     document.getElementById("1pm").setAttribute("class", "present");
-  } else {
-    document.getElementById("1pm").setAttribute("class", "past");
-  }
+  } 
 }
 
 function setStyleOnTime12pm() {
-  var time12Pm = document.getElementById("12pm").textContent;
+  var time12Pm = document.getElementById("12pm").getAttribute("data-time");
 
   if (currentTime < time12Pm) {
     document.getElementById("12pm").setAttribute("class", "future");
@@ -586,7 +583,7 @@ function setStyleOnTime10am() {
 
 
 function setStyleOnTime09am() {
-  var time9am = document.getElementById("09am").textContent;
+  var time9am = document.getElementById("09am").getAttribute("data-time");
   
   if (currentTime < time9am) {
     document.getElementById("09am").setAttribute("class", "future");
