@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: rgb(243, 243, 243);
 }
 
 textarea{
@@ -68,4 +69,25 @@ textarea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+#table {
+  background-color: white;
+  padding: 0px;
+  border-radius: 8px;
+  margin: 10px;
+  -webkit-box-shadow: 3px 5px 19px 2px rgba(0,0,0,0.22); 
+box-shadow: 3px 5px 19px 2px rgba(0,0,0,0.22);
+border: solid 0.5px rgba(37, 37, 37, 0.2);
+
+}
+
+table {
+  margin-bottom: 0px !important;
+}
+
+#clear-all{
+  background-color: white;
+  -webkit-box-shadow: 3px 5px 19px 2px rgba(0,0,0,0.22); 
+  box-shadow: 3px 5px 19px 2px rgba(0,0,0,0.22);
 }
