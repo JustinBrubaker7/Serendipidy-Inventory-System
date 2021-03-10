@@ -465,6 +465,9 @@ document.getElementById("currentDay").innerHTML = time;
 var currentTime = moment().format("h");
 var currentPM = moment().format("a");
 var pm = "pm"
+var am = "am"
+
+console.log(currentPM)
 
 
 function setStyleOnTime5pm() {
@@ -529,13 +532,11 @@ function setStyleOnTime2pm() {
 function setStyleOnTime1pm() {
   var time1Pm = document.getElementById("1pm").getAttribute("data-time");
 
-  if (currentTime < time1Pm) {
+  if (currentTime > time1Pm && currentPM == am) {
     document.getElementById("1pm").setAttribute("class", "future");
-  } else if (currentTime > time1Pm) {
+  } else if (currentTime > time1Pm && currentPM !== am) {
     document.getElementById("1pm").setAttribute("class", "past");
-  }else if (currentTime == time12Pm) {
-    document.getElementById("12pm").setAttribute("class", "present");
-  } else{
+  }else if (currentTime == time1Pm) {
     document.getElementById("1pm").setAttribute("class", "present");
   } 
 }
@@ -574,7 +575,7 @@ function setStyleOnTime10am() {
   var time10am = document.getElementById("10am").getAttribute("data-time");
 
   console.log(currentTime);
-  console.log(currentPM);
+  console.log(time10am);
   if (currentTime < time10am && currentPM !==  pm) {
     document.getElementById("10am").setAttribute("class", "future");
   } else if (currentTime > time10am) {
@@ -590,7 +591,7 @@ function setStyleOnTime10am() {
 function setStyleOnTime09am() {
   var time9am = document.getElementById("09am").getAttribute("data-time");
   
-  if (currentTime < time9am) {
+  if (currentTime < time9am  && !currentTime == time9am) {
     document.getElementById("09am").setAttribute("class", "future");
   } else if (currentTime > time9am) {
     document.getElementById("09am").setAttribute("class", "past");
