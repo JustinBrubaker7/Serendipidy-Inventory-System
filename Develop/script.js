@@ -534,7 +534,7 @@ function setStyleOnTime1pm() {
 
   if (currentTime > time1Pm && currentPM == am) {
     document.getElementById("1pm").setAttribute("class", "future");
-  } else if (currentTime > time1Pm && currentPM !== am) {
+  } else if (currentTime > time1Pm) {
     document.getElementById("1pm").setAttribute("class", "past");
   }else if (currentTime == time1Pm) {
     document.getElementById("1pm").setAttribute("class", "present");
