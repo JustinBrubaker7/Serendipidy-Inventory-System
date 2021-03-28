@@ -1,5 +1,5 @@
-# Simple and Clean Day Planner
+# Inventory System for keeping track of products in Serendipitdy Store
 
-<p><a href="https://justinbrubaker7.github.io/Day-Planner//">Live application</a></p>
+<p><a href="https://justinbrubaker7.github.io/Serendipidy-Inventory-System/">Live application</a></p>
 
-<p align=center><img src="https://media.giphy.com/media/N8yHnszrFJWX3sj7Jh/giphy.gif" width=50% ></p>
+<h3><a href="https://www.etsy.com/shop/SerendipityBathBoxes">Shop Serendipidy Bath Boxes</a></h3>
