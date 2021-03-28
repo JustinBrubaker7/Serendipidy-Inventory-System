@@ -13,6 +13,9 @@ textarea{
   border-left: 1px solid black;
   padding: 10px;
 }
+.container-fluid{
+  padding-left: 0px !important;
+}
 
 .jumbotron {
   text-align: center;

@@ -10,16 +10,16 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./Develop/style.css" />
-  <title>Work Day Scheduler</title>
+  <title>Serendipidy Inventory System</title>
 </head>
 
 <body>
   <header class="jumbotron">
-    <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <h1 class="display-3">Serendipidy Inventory System</h1>
+    <p class="lead">Manage your inventory below</p>
     <p id="currentDay" class="lead"></p>
   </header>
-  <div class="container">
+  <div class="container-fluid">
     <!-- Timeblocks go here -->
 
 
@@ -29,234 +29,62 @@
         <!-- Table header -->
         <thead>
           <tr>
-            <th scope="col" class="">TIME</th>
-            <th scope="col" class="w-50">Entry</th>
-            <th scope="col" class="w-75">Tasks</th>
+            <th scope="col" class="">ID</th>
+            <th scope="col" class="w-25">Enter Product Name</th>
+            <th scope="col" class="w-25">Product</th>
             <th scope="col">Save</th>
-            <th scope="col"></th>
+            <th scope="col" class="w-25">Enter Product Quantity</th>
+            <th scope="col" class="w-25">Product Quantity</th>
+            <th scope="col">Save</th>
+
 
           </tr>
         </thead>
         <tbody>
           <!-- Table row -->
           <tr scope="row">
-            <td class="" id="09am"  data-time="9"><span style="display: none;">0</span>9:00 AM</td>
+            <td class="" id="1" ><span style="display: none;">0</span>1</td>
             <td>
-              <form id="form-9am">
+              <form id="form-product_1">
                 <div class="form-row m-0 p-0">
-                  <div class="col-10">
-                    <input id="input-9am" type="text" class="form-control" placeholder="Enter your task">
+                  <div class="col-11">
+                    <input id="input-product_1-name" type="text" class="form-control" placeholder="Enter product name">
                   </div>
                 </div>
               </form>
             </td>
             <td>
-              <div id="div-9am"></div>
+              <div id="div-product_1-name"></div>
             </td>
             <td>
-              <button form="form-9am" id="save-9am" type="button" class="btn btn-outline-dark">Save</button>
+              <button form="form-product_1" id="save-product_1-name" type="button" class="btn btn-outline-dark">Save</button>
             </td>
             <td>
-              <button form="form-9am" id="clear-9am" type="button" class="btn btn-outline-dark">Clear</button>
+              <form id="form-product_1-quantity">
+                <div class="form-row m-0 p-0">
+                  <div class="col-11">
+                    <input id="input-product_1-quantity" type="number" class="form-control" placeholder="Enter product quantity">
+                  </div>
+                </div>
+              </form>
             </td>
+
+            <td>
+              <div id="div-product_1-quantity"></div>
+            </td>
+
+            <td>
+              <button form="form-product_1-quantity" id="save-product_1-quantity" type="button" class="btn btn-outline-dark">Save</button>
+            </td>
+
           </tr>
           <!-- END Table row -->
 
-          <!-- Table row -->
-          <tr scope="row">
-            <td class="" id="10am" data-time="10">10:00 AM</td>
-            <td>
-              <form id="form-10am">
-                <div class="form-row m-0 p-0">
-                  <div class="col-10">
-                    <input id="input-10am" type="text" class="form-control" placeholder="Enter your task">
-                  </div>
-                </div>
-              </form>
-            </td>
-            <td>
-              <div id="div-10am"></div>
-            </td>
-            <td>
-              <button form="form-10am" id="save-10am" type="button" class="btn btn-outline-dark">Save</button>
-            </td>
-            <td>
-              <button form="form-10am" id="clear-10am" type="button" class="btn btn-outline-dark">Clear</button>
-            </td>
-          </tr>
-          <!-- END Table row -->
-          <!-- Table row -->
-          <tr scope="row">
-            <td  class="" id="11am" data-time="11">11:00 AM</td>
-            <td>
-              <form id="form-11am">
-                <div class="form-row m-0 p-0">
-                  <div class="col-10">
-                    <input id="input-11am" type="text" class="form-control" placeholder="Enter your task">
-                  </div>
-                </div>
-              </form>
-            </td>
-            <td>
-              <div id="div-11am"></div>
-            </td>
-            <td>
-              <button form="form-11am" id="save-11am" type="button" class="btn btn-outline-dark">Save</button>
-            </td>
-            <td>
-              <button form="form-11am" id="clear-11am" type="button" class="btn btn-outline-dark">Clear</button>
-            </td>
-          </tr>
-          <!-- END Table row -->
-
-          <!-- Table row -->
-          <tr scope="row">
-            <td  class="" id="12pm" data-time="12">12:00 PM</td>
-            <td>
-              <form id="form-12pm">
-                <div class="form-row m-0 p-0">
-                  <div class="col-10">
-                    <input id="input-12pm" type="text" class="form-control" placeholder="Enter your task">
-                  </div>
-                </div>
-              </form>
-            </td>
-            <td>
-              <div id="div-12pm"></div>
-            </td>
-            <td>
-              <button form="form-12pm" id="save-12pm" type="button" class="btn btn-outline-dark">Save</button>
-            </td>
-            <td>
-              <button form="form-12pm" id="clear-12pm" type="button" class="btn btn-outline-dark">Clear</button>
-            </td>
-          </tr>
-          <!-- END Table row -->
-
-          <!-- Table row -->
-          <tr scope="row">
-            <td  class="" id="1pm" data-time="1">1:00 PM</td>
-            <td>
-              <form id="form-1pm">
-                <div class="form-row m-0 p-0">
-                  <div class="col-10">
-                    <input id="input-1pm" type="text" class="form-control" placeholder="Enter your task">
-                  </div>
-                </div>
-              </form>
-            </td>
-            <td>
-              <div id="div-1pm"></div>
-            </td>
-            <td>
-              <button form="form-1pm" id="save-1pm" type="button" class="btn btn-outline-dark">Save</button>
-            </td>
-            <td>
-              <button form="form-1pm" id="clear-1pm" type="button" class="btn btn-outline-dark">Clear</button>
-            </td>
-          </tr>
-          <!-- END Table row -->
-
-          <!-- Table row -->
-          <tr scope="row">
-            <td  class="" id="2pm"  data-time="2">2:00 PM</td>
-            <td>
-              <form id="form-2pm">
-                <div class="form-row m-0 p-0">
-                  <div class="col-10">
-                    <input id="input-2pm" type="text" class="form-control" placeholder="Enter your task">
-                  </div>
-                </div>
-              </form>
-            </td>
-            <td>
-              <div id="div-2pm"></div>
-            </td>
-            <td>
-              <button form="form-2pm" id="save-2pm" type="button" class="btn btn-outline-dark">Save</button>
-            </td>
-            <td>
-              <button form="form-2pm" id="clear-2pm" type="button" class="btn btn-outline-dark">Clear</button>
-            </td>
-          </tr>
-          <!-- END Table row -->
-
-          <!-- Table row -->
-          <tr scope="row">
-            <td  class="" id="3pm"  data-time="3">3:00 PM</td>
-            <td>
-              <form id="form-3pm">
-                <div class="form-row m-0 p-0">
-                  <div class="col-10">
-                    <input id="input-3pm" type="text" class="form-control" placeholder="Enter your task">
-                  </div>
-                </div>
-              </form>
-            </td>
-            <td>
-              <div id="div-3pm"></div>
-            </td>
-            <td>
-              <button form="form-3pm" id="save-3pm" type="button" class="btn btn-outline-dark">Save</button>
-            </td>
-            <td>
-              <button form="form-3pm" id="clear-3pm" type="button" class="btn btn-outline-dark">Clear</button>
-            </td>
-          </tr>
-          <!-- END Table row -->
-          <!-- Table row -->
-          <tr scope="row">
-            <td class="" id="4pm"  data-time="4">4:00 PM</td>
-            <td>
-              <form id="form-4pm">
-                <div class="form-row m-0 p-0">
-                  <div class="col-10">
-                    <input id="input-4pm" type="text" class="form-control" placeholder="Enter your task">
-                  </div>
-                </div>
-              </form>
-            </td>
-            <td>
-              <div id="div-4pm"></div>
-            </td>
-            <td>
-              <button form="form-4pm" id="save-4pm" type="button" class="btn btn-outline-dark">Save</button>
-            </td>
-            <td>
-              <button form="form-4pm" id="clear-4pm" type="button" class="btn btn-outline-dark">Clear</button>
-            </td>
-          </tr>
-          <!-- END Table row -->
-          <!-- Table row -->
-          <tr scope="row">
-            <td class="" id="5pm"  data-time="5">5:00 PM</td>
-            <td>
-              <form id="form-5pm">
-                <div class="form-row m-0 p-0">
-                  <div class="col-10">
-                    <input id="input-5pm" type="text" class="form-control" placeholder="Enter your task">
-                  </div>
-                </div>
-              </form>
-            </td>
-            <td>
-              <div id="div-5pm"></div>
-            </td>
-            <td>
-              <button form="form-5pm" id="save-5pm" type="button" class="btn btn-outline-dark">Save</button>
-            </td>
-            <td>
-              <button form="form-5pm" id="clear-5pm" type="button" class="btn btn-outline-dark">Clear</button>
-            </td>
-          </tr>
-          <!-- END Table row -->
 
         </tbody>
       </table>
     </div>
-    <div class="d-flex justify-content-center">
-    <button form="form-all" id="clear-all" type="button" class="btn btn-outline-dark w-75 mb-5">Clear All</button>
-  </div>
+
 
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
