@@ -89,9 +89,9 @@ table {
   margin-bottom: 0px !important;
 }
 
-#clear-all{
-  background-color: white;
-  -webkit-box-shadow: 3px 5px 19px 2px rgba(0,0,0,0.22); 
-  box-shadow: 3px 5px 19px 2px rgba(0,0,0,0.22);
-  border: solid 0.5px rgba(37, 37, 37, 0.3) !important;
+
+#div-product_1-quantity,
+#div-product_1-name {
+  font-size: 150%;
+  color: rgb(3, 65, 3);
 }

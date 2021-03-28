@@ -56,6 +56,7 @@ enterKey1Quantity.addEventListener("keyup", function(event) {
    var product1Quantity = $("#div-product_1-quantity");
    product1Quantity.value = product1QuantityReturn;
    document.getElementById("div-product_1-quantity").textContent = product1QuantityReturn;
+
   }
 });
 
@@ -72,9 +73,6 @@ document.addEventListener("click", function(e){
         document.getElementById("div-product_1-quantity").textContent = product1QuantityReturn;
     }
 });
-
-
-
 
 
 
